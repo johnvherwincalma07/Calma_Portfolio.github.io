@@ -365,3 +365,54 @@ td { padding: 15px 0; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size:
     height: auto;
     display: block;
 }
+
+/* --- LEVEL PROGRESS BAR --- */
+.level-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 15px;
+}
+
+.exp-bar-bg {
+    width: 120px;
+    height: 10px;
+    background: #000;
+    border: 2px solid var(--gold);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.exp-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), #fff);
+    box-shadow: 0 0 10px var(--gold);
+}
+
+/* --- PIXEL GROUND DECORATION --- */
+.game-scene {
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    height: 20px;
+    z-index: 1;
+}
+
+.pixel-ground {
+    width: 100%;
+    height: 8px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--magenta),
+        var(--magenta) 20px,
+        var(--magenta-dark) 20px,
+        var(--magenta-dark) 40px
+    );
+    border-top: 3px solid #000;
+    box-shadow: 0 5px 20px var(--magenta);
+}
+
+/* SIDEBAR TOGGLE CLASSES */
+.sidebar.collapsed { transform: translateX(-250px); }
+.main.expanded { margin-left: 0; }
