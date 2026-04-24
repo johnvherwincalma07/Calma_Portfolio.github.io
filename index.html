@@ -43,6 +43,13 @@
         </div>
 
         <div class="topbar-right">
+            <div class="level-container">
+                <span class="title-font" style="font-size: 0.8rem; color: var(--gold);">LVL 110</span>
+                <div class="exp-bar-bg">
+                    <div class="exp-bar-fill" style="width: 75%;"></div>
+                </div>
+            </div>
+
             <div class="search-box glass">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input id="search" class="rubik-font" placeholder="Search tasks...">
@@ -118,19 +125,29 @@
         </div>
     </section>
 
+    <div class="game-scene">
+        <div class="pixel-ground"></div>
+    </div>
+
 </div>
 
 <script src="script.js"></script>
 <script>
-    // Automatic greeting update
     function updateGreeting() {
         const hour = new Date().getHours();
         const greet = document.getElementById('day-greet');
-        if (hour < 12) greet.innerText = "Good Morning,";
-        else if (hour < 18) greet.innerText = "Good Afternoon,";
-        else greet.innerText = "Good Evening,";
+        if (hour < 12) greet.innerText = "Good Morning, Hero!";
+        else if (hour < 18) greet.innerText = "Good Afternoon, Hero!";
+        else greet.innerText = "Good Evening, Hero!";
     }
     updateGreeting();
+
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const main = document.getElementById('main');
+        sidebar.classList.toggle('collapsed');
+        main.classList.toggle('expanded');
+    }
 </script>
 </body>
 </html>
