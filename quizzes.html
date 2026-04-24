@@ -12,7 +12,7 @@
 
 <div class="sidebar" id="sidebar">
     <div class="profile-container">
-        <img src="profile.jpg" alt="Player Avatar" class="profile-img">
+        <img src="image.png" alt="Player Avatar" class="profile-img">
     </div>
     <h2 class="title-font">JOHN VHERWIN CALMA</h2>
     <h5 class="rubik-font">BS INFOTECH 402C</h5>
@@ -75,16 +75,19 @@
 </div>
 
 <script>
-    function openModal(modalId) {
-        document.getElementById(modalId).style.display = "block";
-        document.body.style.overflow = "hidden"; // Stops background scrolling
-    }
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = "flex"; // Changed from 'block' to 'flex'
+    document.body.style.overflow = "hidden"; 
+}
 
-    function closeModal(modalId) {
-        document.getElementById(modalId).style.display = "none";
-        document.body.style.overflow = "auto"; // Enables scrolling again
-    }
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = "none";
+    document.body.style.overflow = "auto"; 
+}
 
+    
     // Close modal if user clicks outside the content box
     window.onclick = function(event) {
         if (event.target.className === "game-modal") {
