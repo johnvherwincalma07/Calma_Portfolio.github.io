@@ -1,163 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activities - Hero Dashboard</title>
-    <link rel="stylesheet" href="s.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activities - Hero Dashboard</title>
+
+<link rel="stylesheet" href="s.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+
+/* FIXED MODAL SIZE */
+.modal-content {
+  max-height: 80vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* SCROLLABLE CONTENT */
+.reflection-content {
+  margin-top: 15px;
+  overflow-y: auto;
+  max-height: 400px;
+  padding: 15px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.3);
+}
+
+.reflection-content ul {
+  padding-left: 20px;
+}
+
+/* PDF VIEWER */
+.pdf-viewer {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+</style>
 </head>
+
 <body>
 
-<div class="sidebar" id="sidebar">
-    <div class="profile-container"><img src="image.png" alt="Player Avatar" class="profile-img"></div>
-    <h2 class="title-font">JOHN VHERWIN CALMA</h2>
-    <h5 class="rubik-font">BS INFOTECH 402C</h5>
-    <nav class="game-menu">
-        <a href="index.html" class="nav-item">🏠 HOME BASE</a>
-        <a href="activities.html" class="nav-item" style="background: var(--magenta);">📂 ACTIVITIES</a>
-        <a href="quizzes.html" class="nav-item">📝 QUIZZES</a>
-    </nav>
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div class="profile-container">
+    <img src="image.png" class="profile-img">
+  </div>
+  <h2 class="title-font">JOHN VHERWIN CALMA</h2>
+  <h5 class="rubik-font">BS INFOTECH 402C</h5>
+
+  <nav class="game-menu">
+    <a href="index.html" class="nav-item">🏠 HOME BASE</a>
+    <a href="activities.html" class="nav-item" style="background: var(--magenta);">📂 ACTIVITIES</a>
+    <a href="quizzes.html" class="nav-item">📝 QUIZZES</a>
+  </nav>
 </div>
 
-<div class="main" id="main">
-    <header class="topbar glass">
-        <div class="topbar-left">
-            <h3 class="title-font">MISSION: ACTIVITIES</h3>
-        </div>
-        <div class="topbar-right">
-            <a href="index.html" class="game-button cyan-btn rubik-font" style="width: auto; padding: 5px 15px;">BACK</a>
-        </div>
-    </header>
+<!-- MAIN -->
+<div class="main">
 
-    <section class="hero text-center">
-        <h1 class="title-font big-title">ACTIVITY LOGS</h1>
-        <p class="rubik-font subtitle">Complete your missions to level up!</p>
-    </section>
+<header class="topbar glass">
+  <h3 class="title-font">MISSION: ACTIVITIES</h3>
+  <a href="index.html" class="game-button cyan-btn rubik-font" style="width:auto;padding:5px 15px;">BACK</a>
+</header>
 
-    <section class="grid">
-        <div class="game-card">
-            <div class="card-icon cyan-icon"><i class="fa-solid fa-file-code"></i></div>
-            <h3 class="title-font">Laboratory Activity #1</h3>
-            <p class="rubik-font">LINUX BASIC COMMANDS</p>
-            <div style="display: flex; gap: 10px; margin-top: 15px;">
-                <button class="game-button magenta-btn" onclick="openModal('act1-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer; width: 100%;">
-                    <i class="fa-solid fa-circle-plus"></i> VIEW MISSION
-                </button>
-            </div>
-        </div>
+<section class="hero text-center">
+  <h1 class="title-font big-title">ACTIVITY LOGS</h1>
+  <p class="rubik-font subtitle">Complete your missions to level up!</p>
+</section>
 
-        <div class="game-card">
-            <div class="card-icon cyan-icon"><i class="fa-solid fa-palette"></i></div>
-            <h3 class="title-font">Laboratory Activity #2</h3>
-            <p class="rubik-font">FILE ACCESS PERMISSIONS</p>
-            <div style="display: flex; gap: 10px; margin-top: 15px;">
-                <button class="game-button magenta-btn" onclick="openModal('act2-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer; width: 100%;">
-                    <i class="fa-solid fa-circle-plus"></i> VIEW MISSION
-                </button>
-            </div>
-        </div>
+<!-- GRID -->
+<section class="grid">
 
-        <div class="game-card">
-            <div class="card-icon cyan-icon"><i class="fa-solid fa-table"></i></div>
-            <h3 class="title-font">Laboratory Activity #3</h3>
-            <p class="rubik-font">MULTITHREADING</p>
-            <div style="display: flex; gap: 10px; margin-top: 15px;">
-                <button class="game-button magenta-btn" onclick="openModal('act3-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer; width: 100%;">
-                    <i class="fa-solid fa-circle-plus"></i> VIEW MISSION
-                </button>
-            </div>
-        </div>
+<!-- ACTIVITY CARD TEMPLATE -->
+<div class="game-card">
+  <div class="card-icon cyan-icon"><i class="fa-solid fa-file-code"></i></div>
+  <h3 class="title-font">Laboratory Activity #1</h3>
+  <p class="rubik-font">LINUX BASIC COMMANDS</p>
 
-        <div class="game-card">
-            <div class="card-icon cyan-icon"><i class="fa-solid fa-database"></i></div>
-            <h3 class="title-font">Lecture Activity #4</h3>
-            <p class="rubik-font">CPU SCHEDULING</p>
-            <div style="display: flex; gap: 10px; margin-top: 15px;">
-                <button class="game-button magenta-btn" onclick="openModal('act4-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer; width: 100%;">
-                    <i class="fa-solid fa-circle-plus"></i> VIEW MISSION
-                </button>
-            </div>
-        </div>
+  <div style="display:flex;gap:10px;margin-top:15px;">
+    <button class="game-button cyan-btn" onclick="openModal('act1-reflection')" style="font-size:0.8rem;padding:10px;width:100%;">
+      <i class="fa-solid fa-book"></i> REFLECTION
+    </button>
 
-        <div class="game-card">
-            <div class="card-icon cyan-icon"><i class="fa-solid fa-link"></i></div>
-            <h3 class="title-font">Lecture Activity #5</h3>
-            <p class="rubik-font">LINUX BASIC COMMANDS/MULTITHREADING</p>
-            <div style="display: flex; gap: 10px; margin-top: 15px;">
-                <button class="game-button magenta-btn" onclick="openModal('act5-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer; width: 100%;">
-                    <i class="fa-solid fa-circle-plus"></i> VIEW MISSION
-                </button>
-            </div>
-        </div>
-    </section>
+    <button class="game-button magenta-btn" onclick="openModal('act1-modal')" style="font-size:0.8rem;padding:10px;width:100%;">
+      <i class="fa-solid fa-circle-plus"></i> VIEW
+    </button>
+  </div>
 </div>
 
+<!-- ACTIVITY 2 -->
+<div class="game-card">
+  <div class="card-icon cyan-icon"><i class="fa-solid fa-palette"></i></div>
+  <h3 class="title-font">Laboratory Activity #2</h3>
+  <p class="rubik-font">FILE ACCESS PERMISSIONS</p>
+
+  <div style="display:flex;gap:10px;margin-top:15px;">
+    <button class="game-button cyan-btn" onclick="openModal('act2-reflection')" style="font-size:0.8rem;padding:10px;width:100%;">REFLECTION</button>
+    <button class="game-button magenta-btn" onclick="openModal('act2-modal')" style="font-size:0.8rem;padding:10px;width:100%;">VIEW</button>
+  </div>
+</div>
+
+<!-- ACTIVITY 3 -->
+<div class="game-card">
+  <div class="card-icon cyan-icon"><i class="fa-solid fa-table"></i></div>
+  <h3 class="title-font">Laboratory Activity #3</h3>
+  <p class="rubik-font">MULTITHREADING</p>
+
+  <div style="display:flex;gap:10px;margin-top:15px;">
+    <button class="game-button cyan-btn" onclick="openModal('act3-reflection')" style="width:100%;">REFLECTION</button>
+    <button class="game-button magenta-btn" onclick="openModal('act3-modal')" style="width:100%;">VIEW</button>
+  </div>
+</div>
+
+<!-- ACTIVITY 4 -->
+<div class="game-card">
+  <div class="card-icon cyan-icon"><i class="fa-solid fa-database"></i></div>
+  <h3 class="title-font">Lecture Activity #4</h3>
+  <p class="rubik-font">CPU SCHEDULING</p>
+
+  <div style="display:flex;gap:10px;margin-top:15px;">
+    <button class="game-button cyan-btn" onclick="openModal('act4-reflection')" style="width:100%;">REFLECTION</button>
+    <button class="game-button magenta-btn" onclick="openModal('act4-modal')" style="width:100%;">VIEW</button>
+  </div>
+</div>
+
+<!-- ACTIVITY 5 -->
+<div class="game-card">
+  <div class="card-icon cyan-icon"><i class="fa-solid fa-link"></i></div>
+  <h3 class="title-font">Lecture Activity #5</h3>
+  <p class="rubik-font">COMBINED LESSON</p>
+
+  <div style="display:flex;gap:10px;margin-top:15px;">
+    <button class="game-button cyan-btn" onclick="openModal('act5-reflection')" style="width:100%;">REFLECTION</button>
+    <button class="game-button magenta-btn" onclick="openModal('act5-modal')" style="width:100%;">VIEW</button>
+  </div>
+</div>
+
+</section>
+</div>
+
+<!-- ================= MODALS ================= -->
+
+<!-- VIEW MODAL EXAMPLE -->
 <div id="act1-modal" class="game-modal">
-    <div class="modal-content glass">
-        <span class="close-btn" onclick="closeModal('act1-modal')">&times;</span>
-        <h2 class="title-font" style="color: var(--cyan);">MISSION: LINUX BASIC COMMANDS</h2>
-        <div class="screenshot-container"><img src="lab1.jpg" class="screenshot" alt="Activity 1"></div>
-        <p class="rubik-font">Task Status: Finished!</p>
+  <div class="modal-content glass">
+    <span onclick="closeModal('act1-modal')">&times;</span>
+    <h2 class="title-font">LINUX BASIC COMMANDS</h2>
+    <div class="screenshot-container">
+      <img src="lab1.jpg" class="screenshot">
     </div>
+  </div>
 </div>
 
-<div id="act2-modal" class="game-modal">
-    <div class="modal-content glass">
-        <span class="close-btn" onclick="closeModal('act2-modal')">&times;</span>
-        <h2 class="title-font" style="color: var(--cyan);">MISSION: FILE ACCESS PERMISSIONS</h2>
-        <div class="screenshot-container"><img src="lab2.jpg" class="screenshot" alt="Activity 2"></div>
-        <p class="rubik-font">Task Status: Finished!</p>
-    </div>
-</div>
-
-<div id="act3-modal" class="game-modal">
-    <div class="modal-content glass">
-        <span class="close-btn" onclick="closeModal('act3-modal')">&times;</span>
-        <h2 class="title-font" style="color: var(--cyan);">MISSION: MULTITHREADING</h2>
-        <div class="screenshot-container"><img src="act3.jpg" class="screenshot" alt="Activity 3"></div>
-        <p class="rubik-font">Task Status: Finished!</p>
-    </div>
-</div>
-
-<div id="act4-modal" class="game-modal">
-    <div class="modal-content glass">
-        <span class="close-btn" onclick="closeModal('act4-modal')">&times;</span>
-        <h2 class="title-font" style="color: var(--cyan);">MISSION: CPU SCHEDULING</h2>
-        <div class="screenshot-container"><img src="act4.jpg" class="screenshot" alt="Activity 4"></div>
-        <p class="rubik-font">Task Status: Finished!</p>
-    </div>
-</div>
-
+<!-- PDF MODAL -->
 <div id="act5-modal" class="game-modal">
-    <div class="modal-content glass">
-        <span class="close-btn" onclick="closeModal('act5-modal')">&times;</span>
-        <h2 class="title-font" style="color: var(--cyan);">MISSION: LINUX BASIC COMMANDS/MULTITHREADING</h2>
-        <div class="screenshot-container"><iframe src="act5.pdf" class="pdf-viewer" alt="Activity 5"></iframe></div>
-        <p class="rubik-font">Task Status: Finished!</p>
-    </div>
+  <div class="modal-content glass">
+    <span onclick="closeModal('act5-modal')">&times;</span>
+    <h2 class="title-font">COMBINED LESSON</h2>
+    <iframe src="act5.pdf" class="pdf-viewer"></iframe>
+  </div>
 </div>
 
+<!-- REFLECTION MODALS -->
+<div id="act1-reflection" class="game-modal">
+  <div class="modal-content glass">
+    <span onclick="closeModal('act1-reflection')">&times;</span>
+    <h2 class="title-font">REFLECTION</h2>
+
+    <div class="reflection-content">
+      <p>This activity taught me Linux basics and improved my command-line skills.</p>
+      <ul>
+        <li>Linux commands</li>
+        <li>Navigation</li>
+        <li>Terminal usage</li>
+        <li>Efficiency</li>
+        <li>File handling</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="act2-reflection" class="game-modal">
+  <div class="modal-content glass">
+    <span onclick="closeModal('act2-reflection')">&times;</span>
+    <div class="reflection-content">
+      <p>I learned file permissions and system security.</p>
+      <ul>
+        <li>chmod</li>
+        <li>permissions</li>
+        <li>security</li>
+        <li>ownership</li>
+        <li>access control</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="act3-reflection" class="game-modal">
+  <div class="modal-content glass">
+    <span onclick="closeModal('act3-reflection')">&times;</span>
+    <div class="reflection-content">
+      <p>Multithreading helps systems run tasks efficiently.</p>
+      <ul>
+        <li>threads</li>
+        <li>parallel tasks</li>
+        <li>CPU usage</li>
+        <li>speed</li>
+        <li>optimization</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="act4-reflection" class="game-modal">
+  <div class="modal-content glass">
+    <span onclick="closeModal('act4-reflection')">&times;</span>
+    <div class="reflection-content">
+      <p>CPU scheduling manages tasks efficiently.</p>
+      <ul>
+        <li>FIFO</li>
+        <li>Round robin</li>
+        <li>priority</li>
+        <li>allocation</li>
+        <li>process flow</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="act5-reflection" class="game-modal">
+  <div class="modal-content glass">
+    <span onclick="closeModal('act5-reflection')">&times;</span>
+    <div class="reflection-content">
+      <p>This combined activity reinforced all lessons.</p>
+      <ul>
+        <li>integration</li>
+        <li>problem solving</li>
+        <li>analysis</li>
+        <li>debugging</li>
+        <li>real-world use</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPT -->
 <script>
-    function openModal(modalId) {
-        const modal = document.getElementById(modalId);
-        modal.style.display = "flex";
-        document.body.style.overflow = "hidden"; 
-    }
+function openModal(id){
+  document.getElementById(id).style.display="flex";
+  document.body.style.overflow="hidden";
+}
 
-    function closeModal(modalId) {
-        const modal = document.getElementById(modalId);
-        modal.style.display = "none";
-        document.body.style.overflow = "auto"; 
-    }
+function closeModal(id){
+  document.getElementById(id).style.display="none";
+  document.body.style.overflow="auto";
+}
 
-    window.onclick = function(event) {
-        if (event.target.className === "game-modal") {
-            event.target.style.display = "none";
-            document.body.style.overflow = "auto";
-        }
-    }
+window.onclick=function(e){
+  if(e.target.className==="game-modal"){
+    e.target.style.display="none";
+    document.body.style.overflow="auto";
+  }
+}
 </script>
 
 </body>
