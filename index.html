@@ -25,45 +25,109 @@
     </nav>
 </div>
 
-<!-- MAIN -->
 <div class="main" id="main">
 
-  <!-- TOPBAR -->
-  <header class="topbar">
-    
-    <button class="toggle-btn" onclick="toggleSidebar()">
-      <i class="fa-solid fa-bars"></i>
-    </button>
+    <header class="topbar">
+        <div class="topbar-left">
+            <button class="toggle-btn" onclick="toggleSidebar()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="greeting-container">
+                <span id="greeting-text">Welcome,</span>
+                <h3 id="user-name">John Vherwin Calma</h3>
+            </div>
+        </div>
 
-    <input id="search" placeholder="Search anything...">
+        <div class="topbar-right">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input id="search" placeholder="Search anything...">
+            </div>
+            <button class="music-btn" onclick="toggleMusic()">🎵</button>
+            <button class="notif-btn"><i class="fa-solid fa-bell"></i></button>
+        </div>
+    </header>
 
-    <button class="music-btn" onclick="toggleMusic()">
-      🎵
-    </button>
+    <section class="stats-row">
+        <div class="stat-card">
+            <i class="fa-solid fa-rocket"></i>
+            <div><h4>12</h4><p>Total Projects</p></div>
+        </div>
+        <div class="stat-card">
+            <i class="fa-solid fa-star"></i>
+            <div><h4>1.25</h4><p>Current Grade</p></div>
+        </div>
+        <div class="stat-card">
+            <i class="fa-solid fa-check-double"></i>
+            <div><h4>08</h4><p>Tasks Done</p></div>
+        </div>
+    </section>
 
-  </header>
+    <section class="hero">
+        <h1>ITEC 110 Portfolio</h1>
+        <p>Database Management System Dashboard</p>
+    </section>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>ITEC 110 Portfolio</h1>
-    <p>Welcome to your dashboard</p>
-  </section>
+    <section class="grid">
+        <div class="card">
+            <i class="fa-solid fa-folder-open icon-big"></i>
+            <h3>Activities</h3>
+            <p>Laboratory exercises and hands-on drills.</p>
+            <a href="activities.html">Open Folder</a>
+        </div>
 
-  <!-- GRID -->
-  <section class="grid">
-    <div class="card">
-      <h3>Activities</h3>
-      <a href="activities.html">Open</a>
-    </div>
+        <div class="card">
+            <i class="fa-solid fa-pen-to-square icon-big"></i>
+            <h3>Quizzes</h3>
+            <p>Theoretical exams and knowledge checks.</p>
+            <a href="quizzes.html">View Results</a>
+        </div>
+    </section>
 
-    <div class="card">
-      <h3>Quizzes</h3>
-      <a href="quizzes.html">Open</a>
-    </div>
-  </section>
+    <section class="recent-activity">
+        <h3><i class="fa-solid fa-clock-rotate-left"></i> Recent Activity</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task Name</th>
+                        <th>Category</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Entity Relationship Diagram</td>
+                        <td>Activity</td>
+                        <td><span class="status-badge">Completed</span></td>
+                        <td>Oct 20, 2023</td>
+                    </tr>
+                    <tr>
+                        <td>SQL Join Quiz</td>
+                        <td>Quizzes</td>
+                        <td><span class="status-badge">Pending</span></td>
+                        <td>Oct 24, 2023</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 
 </div>
 
+<script src="script.js"></script>
+<script>
+    // AUTOMATIC GREETING LOGIC
+    function updateGreeting() {
+        const hour = new Date().getHours();
+        const greetingElement = document.getElementById('greeting-text');
+        if (hour < 12) greetingElement.innerText = "Good Morning,";
+        else if (hour < 18) greetingElement.innerText = "Good Afternoon,";
+        else greetingElement.innerText = "Good Evening,";
+    }
+    updateGreeting();
+</script>
 <script src="script.js"></script>
 </body>
 </html>
