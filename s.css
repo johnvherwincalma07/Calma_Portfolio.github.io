@@ -237,7 +237,7 @@ body {
 /* RECTANGLE GAME BUTTONS */
 .game-button {
   display: inline-block;
-  padding: 15px;
+  padding-block-start: 30px;
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
