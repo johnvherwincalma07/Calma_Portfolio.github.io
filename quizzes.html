@@ -44,40 +44,114 @@
             <div class="card-icon magenta-icon"><i class="fa-solid fa-bolt"></i></div>
             <h3 class="title-font">Quiz #1</h3>
             <p class="rubik-font">Database Fundamentals <br> Score: 20/20</p>
-            
             <div style="display: flex; gap: 10px; margin-top: 15px;">
                 <a href="#" class="game-button cyan-btn" style="font-size: 0.8rem; padding: 10px;">REVIEW</a>
-                
                 <button class="game-button magenta-btn" onclick="openModal('quiz1-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer;">
                     <i class="fa-solid fa-circle-plus"></i> PROOF
                 </button>
             </div>
         </div>
 
-        </section>
+        <div class="game-card">
+            <div class="card-icon magenta-icon"><i class="fa-solid fa-fire"></i></div>
+            <h3 class="title-font">Quiz #2</h3>
+            <p class="rubik-font">SQL Queries & Joins <br> Score: 18/20</p>
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <a href="#" class="game-button cyan-btn" style="font-size: 0.8rem; padding: 10px;">REVIEW</a>
+                <button class="game-button magenta-btn" onclick="openModal('quiz2-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer;">
+                    <i class="fa-solid fa-circle-plus"></i> PROOF
+                </button>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="card-icon magenta-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3 class="title-font">Quiz #3</h3>
+            <p class="rubik-font">Normalization Forms <br> Score: 15/15</p>
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <a href="#" class="game-button cyan-btn" style="font-size: 0.8rem; padding: 10px;">REVIEW</a>
+                <button class="game-button magenta-btn" onclick="openModal('quiz3-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer;">
+                    <i class="fa-solid fa-circle-plus"></i> PROOF
+                </button>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="card-icon magenta-icon"><i class="fa-solid fa-microchip"></i></div>
+            <h3 class="title-font">Quiz #4</h3>
+            <p class="rubik-font">Data Integrity <br> Score: 10/10</p>
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <a href="#" class="game-button cyan-btn" style="font-size: 0.8rem; padding: 10px;">REVIEW</a>
+                <button class="game-button magenta-btn" onclick="openModal('quiz4-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer;">
+                    <i class="fa-solid fa-circle-plus"></i> PROOF
+                </button>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="card-icon magenta-icon"><i class="fa-solid fa-trophy"></i></div>
+            <h3 class="title-font">Quiz #5</h3>
+            <p class="rubik-font">Final Quiz Recap <br> Score: 50/50</p>
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <a href="#" class="game-button cyan-btn" style="font-size: 0.8rem; padding: 10px;">REVIEW</a>
+                <button class="game-button magenta-btn" onclick="openModal('quiz5-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer;">
+                    <i class="fa-solid fa-circle-plus"></i> PROOF
+                </button>
+            </div>
+        </div>
+
+    </section>
 </div>
 
 <div id="quiz1-modal" class="game-modal">
     <div class="modal-content glass">
         <span class="close-btn" onclick="closeModal('quiz1-modal')">&times;</span>
-        <h2 class="title-font" style="color: var(--cyan);">MISSION COMPLETE!</h2>
-        <hr style="border: 1px solid rgba(255,255,255,0.1); margin: 15px 0;">
-        
-        <div class="screenshot-container">
-            <img src="quiz1-ss.jpg" alt="Quiz 1 Screenshot" class="screenshot">
-        </div>
-        
-        <p class="rubik-font" style="margin-top: 15px; font-weight: bold;">
-            <i class="fa-solid fa-award" style="color: var(--gold);"></i> 
-            Authenticity Verified: Perfect Score Achieved!
-        </p>
+        <h2 class="title-font" style="color: var(--cyan);">MISSION #1 COMPLETE!</h2>
+        <div class="screenshot-container"><img src="quiz1-ss.jpg" class="screenshot"></div>
+        <p class="rubik-font">Verified Achievement: Database Fundamentals Expert!</p>
+    </div>
+</div>
+
+<div id="quiz2-modal" class="game-modal">
+    <div class="modal-content glass">
+        <span class="close-btn" onclick="closeModal('quiz2-modal')">&times;</span>
+        <h2 class="title-font" style="color: var(--cyan);">MISSION #2 COMPLETE!</h2>
+        <div class="screenshot-container"><img src="quiz2-ss.jpg" class="screenshot"></div>
+        <p class="rubik-font">Verified Achievement: SQL Query Master!</p>
+    </div>
+</div>
+
+<div id="quiz3-modal" class="game-modal">
+    <div class="modal-content glass">
+        <span class="close-btn" onclick="closeModal('quiz3-modal')">&times;</span>
+        <h2 class="title-font" style="color: var(--cyan);">MISSION #3 COMPLETE!</h2>
+        <div class="screenshot-container"><img src="quiz3-ss.jpg" class="screenshot"></div>
+        <p class="rubik-font">Verified Achievement: Normalization Guru!</p>
+    </div>
+</div>
+
+<div id="quiz4-modal" class="game-modal">
+    <div class="modal-content glass">
+        <span class="close-btn" onclick="closeModal('quiz4-modal')">&times;</span>
+        <h2 class="title-font" style="color: var(--cyan);">MISSION #4 COMPLETE!</h2>
+        <div class="screenshot-container"><img src="quiz4-ss.jpg" class="screenshot"></div>
+        <p class="rubik-font">Verified Achievement: Integrity Secured!</p>
+    </div>
+</div>
+
+<div id="quiz5-modal" class="game-modal">
+    <div class="modal-content glass">
+        <span class="close-btn" onclick="closeModal('quiz5-modal')">&times;</span>
+        <h2 class="title-font" style="color: var(--cyan);">LEVEL MAX REACHED!</h2>
+        <div class="screenshot-container"><img src="quiz5-ss.jpg" class="screenshot"></div>
+        <p class="rubik-font">Verified Achievement: Final Quiz Legend!</p>
     </div>
 </div>
 
 <script>
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
-    modal.style.display = "flex"; // Changed from 'block' to 'flex'
+    modal.style.display = "flex";
     document.body.style.overflow = "hidden"; 
 }
 
@@ -87,14 +161,12 @@ function closeModal(modalId) {
     document.body.style.overflow = "auto"; 
 }
 
-    
-    // Close modal if user clicks outside the content box
-    window.onclick = function(event) {
-        if (event.target.className === "game-modal") {
-            event.target.style.display = "none";
-            document.body.style.overflow = "auto";
-        }
+window.onclick = function(event) {
+    if (event.target.className === "game-modal") {
+        event.target.style.display = "none";
+        document.body.style.overflow = "auto";
     }
+}
 </script>
 
 </body>
