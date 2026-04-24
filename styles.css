@@ -26,8 +26,8 @@ body {
 
 
 .profile-img {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%; /* Makes it a circle */
   object-fit: cover;  /* Keeps image from stretching */
   border: 3px solid rgba(255, 255, 255, 0.3);
