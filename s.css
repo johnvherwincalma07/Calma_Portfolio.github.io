@@ -9,6 +9,12 @@
   --text-primary: #fff;
 }
 
+.pdf-viewer {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
 body {
   margin: 0;
   padding: 0;
