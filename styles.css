@@ -66,7 +66,6 @@ body {
 
 .main { margin-left:220px; }
 
-.topbar { padding:20px; }
 
 .hero { text-align:center; padding:40px; }
 
@@ -112,4 +111,111 @@ button {
   margin:10% auto;
   width:300px;
   border-radius:10px;
+}
+
+
+topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.topbar-left, .topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.greeting-container h3 { font-size: 1rem; }
+.greeting-container span { font-size: 0.8rem; opacity: 0.7; }
+
+.search-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 15px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box input {
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+}
+
+/* STATS CARDS */
+.stats-row {
+  display: flex;
+  gap: 20px;
+  padding: 20px 30px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  min-width: 180px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-card i { color: #ff77c8; font-size: 1.5rem; }
+.stat-card h4 { margin: 0; font-size: 1.2rem; }
+.stat-card p { margin: 0; font-size: 0.75rem; opacity: 0.6; }
+
+/* RECENT ACTIVITY TABLE */
+.recent-activity {
+  padding: 20px 30px;
+}
+
+.table-container {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th { font-size: 0.8rem; opacity: 0.6; padding-bottom: 10px; }
+td { padding: 12px 0; border-top: 1px solid rgba(255, 255, 255, 0.05); font-size: 0.9rem; }
+
+.status-badge {
+  background: #ff77c8;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.icon-big {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #ff77c8;
+}
+
+.notif-btn {
+  background: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
