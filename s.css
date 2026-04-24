@@ -280,12 +280,12 @@ body {
 }
 
 .card-icon {
-    font-size: 3,5rem;
-    color: var(--cyan);
+    font-size: 3.5rem;
     margin-bottom: 20px;
     text-shadow: 0 0 20px currentColor;
     display: inline-block;
-
+    text-shadow: 0 0 20px currentColor;
+    color: #fff;
 }
 
 .game-card h3 { color: var(--text-primary); font-size: 1.8rem; margin: 0; -webkit-text-stroke: 1px #000; text-shadow: 3px 3px 0 #000; }
