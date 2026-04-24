@@ -45,7 +45,6 @@
             <h3 class="title-font">Quiz #1</h3>
             <p class="rubik-font">HISTORY OF OPERATING SYSTEM</p>
             <div style="display: flex; gap: 10px; margin-top: 15px;">
-                <a href="#" class="game-button cyan-btn" style="font-size: 0.8rem; padding: 10px;">REVIEW</a>
                 <button class="game-button magenta-btn" onclick="openModal('quiz1-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer;">
                     <i class="fa-solid fa-circle-plus"></i> PROOF
                 </button>
@@ -57,7 +56,6 @@
             <h3 class="title-font">Quiz #2</h3>
             <p class="rubik-font">FILE ACCESS PERMISSIONS</p>
             <div style="display: flex; gap: 10px; margin-top: 15px;">
-                <a href="#" class="game-button cyan-btn" style="font-size: 0.8rem; padding: 10px;">REVIEW</a>
                 <button class="game-button magenta-btn" onclick="openModal('quiz2-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer;">
                     <i class="fa-solid fa-circle-plus"></i> PROOF
                 </button>
@@ -69,7 +67,6 @@
             <h3 class="title-font">Quiz #3</h3>
             <p class="rubik-font">PROCESS MANAGEMENT</p>
             <div style="display: flex; gap: 10px; margin-top: 15px;">
-                <a href="#" class="game-button cyan-btn" style="font-size: 0.8rem; padding: 10px;">REVIEW</a>
                 <button class="game-button magenta-btn" onclick="openModal('quiz3-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer;">
                     <i class="fa-solid fa-circle-plus"></i> PROOF
                 </button>
@@ -81,20 +78,7 @@
             <h3 class="title-font">Quiz #4</h3>
             <p class="rubik-font">CPU SCHEDULING</p>
             <div style="display: flex; gap: 10px; margin-top: 15px;">
-                <a href="#" class="game-button cyan-btn" style="font-size: 0.8rem; padding: 10px;">REVIEW</a>
                 <button class="game-button magenta-btn" onclick="openModal('quiz4-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer;">
-                    <i class="fa-solid fa-circle-plus"></i> PROOF
-                </button>
-            </div>
-        </div>
-
-        <div class="game-card">
-            <div class="card-icon magenta-icon"><i class="fa-solid fa-trophy"></i></div>
-            <h3 class="title-font">Quiz #5</h3>
-            <p class="rubik-font">Final Quiz Recap <br> Score: 50/50</p>
-            <div style="display: flex; gap: 10px; margin-top: 15px;">
-                <a href="#" class="game-button cyan-btn" style="font-size: 0.8rem; padding: 10px;">REVIEW</a>
-                <button class="game-button magenta-btn" onclick="openModal('quiz5-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer;">
                     <i class="fa-solid fa-circle-plus"></i> PROOF
                 </button>
             </div>
@@ -139,14 +123,6 @@
     </div>
 </div>
 
-<div id="quiz5-modal" class="game-modal">
-    <div class="modal-content glass">
-        <span class="close-btn" onclick="closeModal('quiz5-modal')">&times;</span>
-        <h2 class="title-font" style="color: var(--cyan);">LEVEL MAX REACHED!</h2>
-        <div class="screenshot-container"><img src="quiz5-ss.jpg" class="screenshot"></div>
-        <p class="rubik-font">Verified Achievement: Final Quiz Legend!</p>
-    </div>
-</div>
 
 <script>
 function openModal(modalId) {
