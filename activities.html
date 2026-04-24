@@ -40,17 +40,125 @@
         <div class="game-card">
             <div class="card-icon cyan-icon"><i class="fa-solid fa-file-code"></i></div>
             <h3 class="title-font">Activity 1</h3>
-            <p>Introduction to HTML & Basic Tags</p>
-            <a href="#" class="game-button magenta-btn">VIEW MISSION</a>
+            <p class="rubik-font">HTML & Basic Tags</p>
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <button class="game-button magenta-btn" onclick="openModal('act1-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer; width: 100%;">
+                    <i class="fa-solid fa-circle-plus"></i> VIEW MISSION
+                </button>
+            </div>
         </div>
+
         <div class="game-card">
-            <div class="card-icon cyan-icon"><i class="fa-solid fa-file-code"></i></div>
+            <div class="card-icon cyan-icon"><i class="fa-solid fa-palette"></i></div>
             <h3 class="title-font">Activity 2</h3>
-            <p>CSS Styling & Layouts</p>
-            <a href="#" class="game-button magenta-btn">VIEW MISSION</a>
+            <p class="rubik-font">CSS Styling & Layouts</p>
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <button class="game-button magenta-btn" onclick="openModal('act2-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer; width: 100%;">
+                    <i class="fa-solid fa-circle-plus"></i> VIEW MISSION
+                </button>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="card-icon cyan-icon"><i class="fa-solid fa-table"></i></div>
+            <h3 class="title-font">Activity 3</h3>
+            <p class="rubik-font">Entity Relationship (ERD)</p>
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <button class="game-button magenta-btn" onclick="openModal('act3-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer; width: 100%;">
+                    <i class="fa-solid fa-circle-plus"></i> VIEW MISSION
+                </button>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="card-icon cyan-icon"><i class="fa-solid fa-database"></i></div>
+            <h3 class="title-font">Activity 4</h3>
+            <p class="rubik-font">MySQL Table Creation</p>
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <button class="game-button magenta-btn" onclick="openModal('act4-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer; width: 100%;">
+                    <i class="fa-solid fa-circle-plus"></i> VIEW MISSION
+                </button>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="card-icon cyan-icon"><i class="fa-solid fa-link"></i></div>
+            <h3 class="title-font">Activity 5</h3>
+            <p class="rubik-font">Relational Schema</p>
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <button class="game-button magenta-btn" onclick="openModal('act5-modal')" style="font-size: 0.8rem; padding: 10px; cursor: pointer; width: 100%;">
+                    <i class="fa-solid fa-circle-plus"></i> VIEW MISSION
+                </button>
+            </div>
         </div>
     </section>
 </div>
+
+<div id="act1-modal" class="game-modal">
+    <div class="modal-content glass">
+        <span class="close-btn" onclick="closeModal('act1-modal')">&times;</span>
+        <h2 class="title-font" style="color: var(--cyan);">MISSION: HTML TAGS</h2>
+        <div class="screenshot-container"><img src="act1-ss.jpg" class="screenshot" alt="Activity 1"></div>
+        <p class="rubik-font">Task: Created a basic webpage using structural HTML5 tags.</p>
+    </div>
+</div>
+
+<div id="act2-modal" class="game-modal">
+    <div class="modal-content glass">
+        <span class="close-btn" onclick="closeModal('act2-modal')">&times;</span>
+        <h2 class="title-font" style="color: var(--cyan);">MISSION: CSS STYLING</h2>
+        <div class="screenshot-container"><img src="act2-ss.jpg" class="screenshot" alt="Activity 2"></div>
+        <p class="rubik-font">Task: Designed a responsive layout with Flexbox and Colors.</p>
+    </div>
+</div>
+
+<div id="act3-modal" class="game-modal">
+    <div class="modal-content glass">
+        <span class="close-btn" onclick="closeModal('act3-modal')">&times;</span>
+        <h2 class="title-font" style="color: var(--cyan);">MISSION: ERD DESIGN</h2>
+        <div class="screenshot-container"><img src="act3-ss.jpg" class="screenshot" alt="Activity 3"></div>
+        <p class="rubik-font">Task: Modeled a database system using Chen's notation.</p>
+    </div>
+</div>
+
+<div id="act4-modal" class="game-modal">
+    <div class="modal-content glass">
+        <span class="close-btn" onclick="closeModal('act4-modal')">&times;</span>
+        <h2 class="title-font" style="color: var(--cyan);">MISSION: MYSQL TABLES</h2>
+        <div class="screenshot-container"><img src="act4-ss.jpg" class="screenshot" alt="Activity 4"></div>
+        <p class="rubik-font">Task: Implemented DDL commands to create primary and foreign keys.</p>
+    </div>
+</div>
+
+<div id="act5-modal" class="game-modal">
+    <div class="modal-content glass">
+        <span class="close-btn" onclick="closeModal('act5-modal')">&times;</span>
+        <h2 class="title-font" style="color: var(--cyan);">MISSION: RELATIONAL SCHEMA</h2>
+        <div class="screenshot-container"><img src="act5-ss.jpg" class="screenshot" alt="Activity 5"></div>
+        <p class="rubik-font">Task: Translated ERD diagrams into normalized relational tables.</p>
+    </div>
+</div>
+
+<script>
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden"; 
+    }
+
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.style.display = "none";
+        document.body.style.overflow = "auto"; 
+    }
+
+    window.onclick = function(event) {
+        if (event.target.className === "game-modal") {
+            event.target.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    }
+</script>
 
 </body>
 </html>
