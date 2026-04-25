@@ -20,17 +20,31 @@
   flex-direction: column;
 }
 
-/* SCROLLABLE CONTENT */
 .reflection-content {
   margin-top: 15px;
   overflow-y: auto;
   max-height: 400px;
-  padding: 15px;
-  border: 2px solid #000;
-  border-radius: 10px;
-  background: rgba(0,0,0,0.3);
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(0,0,0,0.6), rgba(20,20,20,0.8));
+  border: 2px solid #00f7ff;
+  box-shadow: 0 0 15px rgba(0,255,255,0.3);
+  scroll-behavior: smooth;
 }
 
+/* SCROLLBAR STYLE */
+.reflection-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.reflection-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.reflection-content::-webkit-scrollbar-thumb {
+  background: #00f7ff;
+  border-radius: 10px;
+}
 .reflection-content ul {
   padding-left: 20px;
 }
@@ -215,21 +229,54 @@
 </div>
 </div>
 
-<!-- REFLECTION MODALS -->
 <div id="act1-reflection" class="game-modal">
   <div class="modal-content glass">
     <span onclick="closeModal('act1-reflection')">&times;</span>
     <h2 class="title-font">REFLECTION</h2>
 
     <div class="reflection-content">
-      <p>This activity taught me Linux basics and improved my command-line skills.</p>
-      <ul>
-        <li>Linux commands</li>
-        <li>Navigation</li>
-        <li>Terminal usage</li>
-        <li>Efficiency</li>
-        <li>File handling</li>
-      </ul>
+
+      <h3>II. GIVE 5 COMMANDS YOU MASTER AFTER OUR ACTIVITY</h3>
+
+      <p><b>1. pwd</b><br>
+      Purpose: Shows your current directory<br>
+      Example: pwd<br>
+      Result: /home/kali/Desktop<br>
+      Meaning: Shows where you are working</p>
+
+      <p><b>2. ls</b><br>
+      Purpose: Lists files and folders<br>
+      Example: ls<br>
+      Result: Documents Downloads Desktop<br>
+      Meaning: Displays folder contents</p>
+
+      <p><b>3. cd</b><br>
+      Purpose: Change directory<br>
+      Example: cd Desktop<br>
+      Result: Moves to Desktop<br>
+      Meaning: Navigate folders</p>
+
+      <p><b>4. mkdir</b><br>
+      Purpose: Create folder<br>
+      Example: mkdir test<br>
+      Result: New folder created<br>
+      Meaning: Organize files</p>
+
+      <p><b>5. rm</b><br>
+      Purpose: Delete files<br>
+      Example: rm file.txt<br>
+      Result: File removed<br>
+      Meaning: Permanent delete</p>
+
+      <h3>III. REFLECTION AFTER OUR SESSION</h3>
+      <p>
+      After our session, I learned basic Linux commands that are essential for beginners.
+      The commands like pwd, ls, and cd helped me understand navigation inside the system.
+      mkdir and rm taught me how to manage files and folders properly.
+      Overall, the activity made Linux easier to understand and improved my confidence
+      in using the terminal.
+      </p>
+
     </div>
   </div>
 </div>
@@ -237,15 +284,52 @@
 <div id="act2-reflection" class="game-modal">
   <div class="modal-content glass">
     <span onclick="closeModal('act2-reflection')">&times;</span>
+    <h2 class="title-font">REFLECTION</h2>
+
     <div class="reflection-content">
-      <p>I learned file permissions and system security.</p>
-      <ul>
-        <li>chmod</li>
-        <li>permissions</li>
-        <li>security</li>
-        <li>ownership</li>
-        <li>access control</li>
-      </ul>
+
+      <h3>II. GIVE 5 COMMANDS YOU MASTER AFTER OUR ACTIVITY</h3>
+
+      <p><b>1. chmod (symbolic mode)</b><br>
+      Purpose: Change file permissions using letters (u, g, o)<br>
+      Example: chmod u+x file.txt<br>
+      Result: Execute permission is added to the user<br>
+      Meaning: Allows control of permissions using symbols</p>
+
+      <p><b>2. chmod (octal mode)</b><br>
+      Purpose: Set permissions using numeric values<br>
+      Example: chmod 755 file.txt<br>
+      Result: rwxr-xr-x permissions applied<br>
+      Meaning: Uses numbers to quickly assign permissions</p>
+
+      <p><b>3. ls -l</b><br>
+      Purpose: View file permissions and details<br>
+      Example: ls -l<br>
+      Result: -rwxr-xr-x file.txt<br>
+      Meaning: Shows who can read, write, or execute the file</p>
+
+      <p><b>4. tar (archive with compression)</b><br>
+      Purpose: Archive and compress files into one file<br>
+      Example: tar -czvf archive.tar.gz folder/<br>
+      Result: archive.tar.gz is created<br>
+      Meaning: Combines and compresses files for easier storage or transfer</p>
+
+      <p><b>5. tar (extract compressed archive)</b><br>
+      Purpose: Extract archived and compressed files<br>
+      Example: tar -xzvf archive.tar.gz<br>
+      Result: Files are extracted from archive<br>
+      Meaning: Restores files from compressed archive</p>
+
+      <h3>III. REFLECTION AFTER OUR SESSION</h3>
+      <p>
+      After our session, I learned how to manage file access permissions in Kali Linux.
+      I understood how to use both symbolic and octal modes in chmod to control file access.
+      The ls -l command helped me clearly see permission settings for each file.
+      In addition, I also learned how to archive and compress files using tar,
+      which is useful for organizing and transferring files efficiently.
+      Overall, this activity improved my understanding of both file security and file management in Linux systems.
+      </p>
+
     </div>
   </div>
 </div>
@@ -253,31 +337,105 @@
 <div id="act3-reflection" class="game-modal">
   <div class="modal-content glass">
     <span onclick="closeModal('act3-reflection')">&times;</span>
+    <h2 class="title-font">REFLECTION</h2>
+
     <div class="reflection-content">
-      <p>Multithreading helps systems run tasks efficiently.</p>
-      <ul>
-        <li>threads</li>
-        <li>parallel tasks</li>
-        <li>CPU usage</li>
-        <li>speed</li>
-        <li>optimization</li>
-      </ul>
+
+      <h3>II. GIVE 5 COMMANDS YOU MASTER AFTER OUR ACTIVITY</h3>
+
+      <p><b>1. vim</b><br>
+      Purpose: Text editor used to write code<br>
+      Example: vim program.cpp<br>
+      Result: Opens C++ file<br>
+      Meaning: Used to create multithreading programs</p>
+
+      <p><b>2. g++</b><br>
+      Purpose: Compile C++ program<br>
+      Example: g++ program.cpp -o program<br>
+      Result: Executable file created<br>
+      Meaning: Converts code into runnable program</p>
+
+      <p><b>3. ./program</b><br>
+      Purpose: Run compiled program<br>
+      Example: ./program<br>
+      Result: Program runs<br>
+      Meaning: Executes multithreaded code</p>
+
+      <p><b>4. clear</b><br>
+      Purpose: Clear terminal screen<br>
+      Example: clear<br>
+      Result: Terminal is cleared<br>
+      Meaning: Makes output easier to read</p>
+
+      <p><b>5. ls</b><br>
+      Purpose: List files in directory<br>
+      Example: ls<br>
+      Result: Shows program.cpp and program<br>
+      Meaning: Helps check files before compiling</p>
+
+      <h3>III. REFLECTION AFTER OUR SESSION</h3>
+      <p>
+      After our session, I learned how to create and run multithreading programs using C++ in Kali Linux.
+      I used vim to write the code and g++ to compile it into an executable file.
+      Running the program helped me understand how multiple threads can work at the same time.
+      I also used simple commands like clear and ls to manage the terminal and files.
+      Overall, this activity helped me understand how multithreading improves program performance
+      and made me more confident in using Linux for programming.
+      </p>
+
     </div>
   </div>
 </div>
 
-<div id="act4-reflection" class="game-modal">
+<div id="act4-reflection" class="game-modal"> 
   <div class="modal-content glass">
     <span onclick="closeModal('act4-reflection')">&times;</span>
+
     <div class="reflection-content">
-      <p>CPU scheduling manages tasks efficiently.</p>
-      <ul>
-        <li>FIFO</li>
-        <li>Round robin</li>
-        <li>priority</li>
-        <li>allocation</li>
-        <li>process flow</li>
-      </ul>
+
+      <h3>II. GIVE 5 LESSONS YOU MASTER AFTER OUR ACTIVITY</h3>
+
+      <p><b>1. First Come First Serve (FCFS)</b><br>
+      Purpose: Executes processes based on arrival time<br>
+      Example: P1 → P2 → P3<br>
+      Result: Processes run in order of arrival<br>
+      Meaning: Simple scheduling but may cause long waiting time</p>
+
+      <p><b>2. Shortest Job First (SJF)</b><br>
+      Purpose: Executes the shortest process first<br>
+      Example: Process with smallest burst time runs first<br>
+      Result: Faster average waiting time<br>
+      Meaning: Efficient but needs burst time estimation</p>
+
+      <p><b>3. Round Robin (RR)</b><br>
+      Purpose: Each process gets equal time (time quantum)<br>
+      Example: P1 → P2 → P3 → repeat<br>
+      Result: Fair CPU sharing<br>
+      Meaning: Prevents starvation</p>
+
+      <p><b>4. Priority Scheduling</b><br>
+      Purpose: Executes based on priority level<br>
+      Example: High priority runs first<br>
+      Result: Important tasks execute earlier<br>
+      Meaning: Low priority may wait longer</p>
+
+      <p><b>5. Gantt Chart</b><br>
+      Purpose: Visual representation of process execution<br>
+      Example: | P1 | P2 | P3 |<br>
+      Result: Shows execution order and time<br>
+      Meaning: Helps analyze scheduling performance</p>
+
+      <h3>III. REFLECTION AFTER OUR SESSION</h3>
+      <p>
+      This activity helped me understand different CPU scheduling algorithms.
+      I learned how processes are arranged and executed using methods like FCFS,
+      SJF, Round Robin, and Priority Scheduling.
+      Creating a Gantt Chart helped me visualize the order of execution and compute
+      waiting and turnaround times.
+      Overall, I realized how important scheduling is in improving system performance
+      and ensuring fairness among processes.
+      </p>
+
     </div>
   </div>
 </div>
@@ -285,15 +443,53 @@
 <div id="act5-reflection" class="game-modal">
   <div class="modal-content glass">
     <span onclick="closeModal('act5-reflection')">&times;</span>
+
     <div class="reflection-content">
-      <p>This combined activity reinforced all lessons.</p>
-      <ul>
-        <li>integration</li>
-        <li>problem solving</li>
-        <li>analysis</li>
-        <li>debugging</li>
-        <li>real-world use</li>
-      </ul>
+
+      <h3>II. GIVE 5 COMMANDS YOU MASTER AFTER OUR ACTIVITY</h3>
+
+      <p><b>1. ls</b><br>
+      Purpose: Display files and directories<br>
+      Example: ls<br>
+      Result: Shows list of files<br>
+      Meaning: Helps check contents of a folder</p>
+
+      <p><b>2. cd</b><br>
+      Purpose: Change directory<br>
+      Example: cd Documents<br>
+      Result: Moves to Documents folder<br>
+      Meaning: Used to navigate the system</p>
+
+      <p><b>3. chmod 755</b><br>
+      Purpose: Set file permissions (octal mode)<br>
+      Example: chmod 755 file.txt<br>
+      Result: rwxr-xr-x permissions applied<br>
+      Meaning: Controls access to files</p>
+
+      <p><b>4. tar -czvf</b><br>
+      Purpose: Archive and compress files<br>
+      Example: tar -czvf archive.tar.gz folder/<br>
+      Result: archive.tar.gz created<br>
+      Meaning: Combines and compresses files</p>
+
+      <p><b>5. g++</b><br>
+      Purpose: Compile C++ program<br>
+      Example: g++ threadAct.cpp -o thread -pthread<br>
+      Result: Executable file created<br>
+      Meaning: Converts code into runnable program with multithreading</p>
+
+      <h3>III. REFLECTION AFTER OUR SESSION</h3>
+      <p>
+      After completing all the activities, I learned important Linux skills including file navigation,
+      file permissions, archiving, and multithreading. Commands like ls and cd helped me move
+      through directories and manage files efficiently. I also learned how to control file access
+      using chmod in octal mode, which is important for system security. The tar command taught
+      me how to archive and compress files, making file management easier and more organized.
+      In addition, I learned how to create and run multithreading programs using C++ by writing
+      code in a file and compiling it using g++. Overall, these lessons helped me understand how
+      Linux works in real situations and improved my confidence in using the terminal.
+      </p>
+
     </div>
   </div>
 </div>
